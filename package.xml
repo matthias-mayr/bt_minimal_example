@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>bt_minimal_example</name>
+  <version>1.0.0</version>
+  <description>The bt_minimal_example package</description>
+
+  <maintainer email="matthias.mayr@cs.lth.se">Matthias Mayr</maintainer>
+
+  <license>BSD</license>
+
+  <author email="matthias.mayr@cs.lth.se">Matthias Mayr</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>behaviortree_cpp_v3</build_depend>
+  <build_depend>Eigen3</build_depend>
+  <build_export_depend>behaviortree_cpp_v3</build_export_depend>
+  <build_export_depend>Eigen3</build_export_depend>
+  <exec_depend>behaviortree_cpp_v3</exec_depend>
+  <exec_depend>Eigen3</exec_depend>
+
+  <export></export>
+</package>
