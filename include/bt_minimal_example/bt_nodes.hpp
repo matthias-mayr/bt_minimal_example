@@ -59,16 +59,21 @@ namespace bt_learning_nodes {
         }
     };
 
-    class SetMGGoal : public BT::AsyncActionNode
+    class SetMGGoal : public BT::ActionNodeBase
     {
     public:
         SetMGGoal(const std::string& name, const BT::NodeConfiguration& config) :
-            BT::AsyncActionNode(name, config){}
+            BT::ActionNodeBase(name, config){}
 
         static BT::PortsList providedPorts() { return {
             BT::InputPort<double>("mp_param_x"),
             BT::OutputPort<double>("mg_trans_x"),
         }; }
+
+        void halt()
+        {
+            setStatus(BT::NodeStatus::IDLE);
+        }
 
         BT::NodeStatus tick() override
         {
